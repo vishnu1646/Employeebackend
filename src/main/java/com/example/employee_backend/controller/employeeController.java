@@ -18,4 +18,14 @@ public class employeeController {
         return  "Searching an employee";
      }
 
+     @GetMapping("/edit")
+    private String edit(){
+        return "Editing an employee";
+     }
+
+     @GetMapping("/viewall")
+    private String view(){
+        return "Viewing Employees";
+     }
+
 }
