@@ -13,5 +13,9 @@ public class employeeController {
     public String Adding(){
         return "Adding an employee";
      }
+     @GetMapping("/search")
+    public String Searching(){
+        return  "Searching an employee";
+     }
 
 }
