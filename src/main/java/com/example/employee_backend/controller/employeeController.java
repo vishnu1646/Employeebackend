@@ -9,6 +9,9 @@ public class employeeController {
         return "Welcome to employee page";
     }
 
-
+     @GetMapping("/add")
+    public String Adding(){
+        return "Adding an employee";
+     }
 
 }
