@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class employeeController {
+    @GetMapping("/")
+    public String Homepage(){
+        return "Welcome to Homepage";
+    }
 
      @PostMapping(path = "/add",consumes = "application/json",produces = "application/json")
     public String Adding(@RequestBody employee e){
