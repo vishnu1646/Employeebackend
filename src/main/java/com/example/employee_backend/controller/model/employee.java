@@ -10,12 +10,12 @@ import jakarta.persistence.Table;
 public class employee {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue()
     private int id;
     private int empcode;
     private String name;
     private String designation;
-    private int Salary;
+    private int salary;
     private String cmpnyname;
     private int phonenum;
     private String username;
@@ -29,7 +29,7 @@ public class employee {
         this.empcode = empcode;
         this.name = name;
         this.designation = designation;
-        this.Salary = salary;
+        this.salary = salary;
         this.cmpnyname = cmpnyname;
         this.phonenum = phonenum;
         this.username = username;
@@ -69,11 +69,11 @@ public class employee {
     }
 
     public int getSalary() {
-        return Salary;
+        return salary;
     }
 
     public void setSalary(int salary) {
-        Salary = salary;
+        salary = salary;
     }
 
     public String getCmpnyname() {
