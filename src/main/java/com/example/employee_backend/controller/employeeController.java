@@ -3,10 +3,7 @@ package com.example.employee_backend.controller;
 import com.example.employee_backend.controller.model.employee;
 import com.example.employee_backend.dao.EmployeeDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,6 +33,15 @@ public class employeeController {
     public List <employee>viewall(){
         return (List<employee>) da.findAll();
      }
+
+@CrossOrigin(origins = "*")
+    @PostMapping(path = "/search",consumes = "application/json",produces = "application/json")
+    public List<employee> SearchEmp(@RequestBody employee e){
+    String empcode =String.valueOf(e.getEmpcode());
+    System.out.println(empcode);
+    return (List<employee>)
+            da.searchemployee(e.getEmpcode());
+    }
 
 
 
